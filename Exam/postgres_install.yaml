@@ -1,0 +1,10 @@
+- name: Install postgres
+  hosts: [web]
+  become: true
+  become_user: root
+
+  tasks:
+    - name: Run script to install postgres
+      ansible.builtin.script: /home/motunrayo/Documents/Exam/postgres_install.sh
+      args:
+        chdir: /home/ubuntu
