@@ -1,0 +1,842 @@
+<pre><font color="#26A269"><b>motunrayo@motunrayo-HP-Laptop-14-dq4xxx</b></font>:<font color="#12488B"><b>~</b></font>$ eval $(ssh-agent)
+Agent pid 66845
+<font color="#26A269"><b>motunrayo@motunrayo-HP-Laptop-14-dq4xxx</b></font>:<font color="#12488B"><b>~</b></font>$ ssh-add Downloads/altschool.pem 
+Identity added: Downloads/altschool.pem (Downloads/altschool.pem)
+<font color="#26A269"><b>motunrayo@motunrayo-HP-Laptop-14-dq4xxx</b></font>:<font color="#12488B"><b>~</b></font>$ rsync -avHP -e &quot;ssh -J ubuntu@54.191.184.24&quot; /home/motunrayo/Documents/Altschool-Cloud-Exercises/Holiday-Project/hostname.py ubuntu@10.0.158.221:
+The authenticity of host &apos;10.0.158.221 (&lt;no hostip for proxy command&gt;)&apos; can&apos;t be established.
+ED25519 key fingerprint is SHA256:O1RiUgVLk47gcnODm1LkPR4HIXC2KLsk7rSvOKMuQMg.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added &apos;10.0.158.221&apos; (ED25519) to the list of known hosts.
+sending incremental file list
+hostname.py
+            337 100%    0.00kB/s    0:00:00 (xfr#1, to-chk=0/1)
+
+sent 457 bytes  received 35 bytes  39.36 bytes/sec
+total size is 337  speedup is 0.68
+<font color="#26A269"><b>motunrayo@motunrayo-HP-Laptop-14-dq4xxx</b></font>:<font color="#12488B"><b>~</b></font>$ ssh -J ubuntu@54.191.184.24 ubuntu@10.0.158.221
+Welcome to Ubuntu 22.04.1 LTS (GNU/Linux 5.15.0-1026-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Tue Jan 10 10:02:34 UTC 2023
+
+  System load:  0.01220703125     Processes:             98
+  Usage of /:   7.9% of 19.20GB   Users logged in:       0
+  Memory usage: 21%               IPv4 address for eth0: 10.0.158.221
+  Swap usage:   0%
+
+
+0 updates can be applied immediately.
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+
+To run a command as administrator (user &quot;root&quot;), use &quot;sudo &lt;command&gt;&quot;.
+See &quot;man sudo_root&quot; for details.
+
+<font color="#26A269"><b>ubuntu@ip-10-0-158-221</b></font>:<font color="#12488B"><b>~</b></font>$ sudo apt update
+Hit:1 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy InRelease
+Get:2 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy-updates InRelease [114 kB]
+Get:3 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy-backports InRelease [99.8 kB]
+Get:4 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy/universe amd64 Packages [14.1 MB]
+Get:5 http://security.ubuntu.com/ubuntu jammy-security InRelease [110 kB]      
+Get:6 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy/universe Translation-en [5652 kB]
+Get:7 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy/universe amd64 c-n-f Metadata [286 kB]
+Get:8 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy/multiverse amd64 Packages [217 kB]
+Get:9 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy/multiverse Translation-en [112 kB]
+Get:10 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy/multiverse amd64 c-n-f Metadata [8372 B]
+Get:11 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [799 kB]
+Get:12 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy-updates/main Translation-en [177 kB]
+Get:13 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 c-n-f Metadata [12.0 kB]
+Get:14 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [527 kB]
+Get:15 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy-updates/restricted Translation-en [80.6 kB]
+Get:16 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 c-n-f Metadata [552 B]
+Get:17 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [781 kB]
+Get:18 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [553 kB]
+Get:19 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy-updates/universe Translation-en [134 kB]
+Get:20 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 c-n-f Metadata [14.6 kB]
+Get:21 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [7988 B]
+Get:22 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy-updates/multiverse Translation-en [2448 B]
+Get:23 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 c-n-f Metadata [432 B]
+Get:24 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [3324 B]
+Get:25 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy-backports/main Translation-en [1580 B]
+Get:26 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy-backports/main amd64 c-n-f Metadata [272 B]
+Get:27 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy-backports/restricted amd64 c-n-f Metadata [116 B]
+Get:28 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [6748 B]
+Get:29 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy-backports/universe Translation-en [9460 B]
+Get:30 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy-backports/universe amd64 c-n-f Metadata [348 B]
+Get:31 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy-backports/multiverse amd64 c-n-f Metadata [116 B]
+Get:32 http://security.ubuntu.com/ubuntu jammy-security/main Translation-en [118 kB]
+Get:33 http://security.ubuntu.com/ubuntu jammy-security/main amd64 c-n-f Metadata [7580 B]
+Get:34 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [483 kB]
+Get:35 http://security.ubuntu.com/ubuntu jammy-security/restricted Translation-en [73.8 kB]
+Get:36 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 c-n-f Metadata [556 B]
+Get:37 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [627 kB]
+Get:38 http://security.ubuntu.com/ubuntu jammy-security/universe Translation-en [83.7 kB]
+Get:39 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 c-n-f Metadata [11.0 kB]
+Get:40 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [4268 B]
+Get:41 http://security.ubuntu.com/ubuntu jammy-security/multiverse Translation-en [972 B]
+Get:42 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 c-n-f Metadata [228 B]
+Fetched 25.2 MB in 4s (6207 kB/s)<font color="#A2734C">                         </font>
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+32 packages can be upgraded. Run &apos;apt list --upgradable&apos; to see them.
+<font color="#26A269"><b>ubuntu@ip-10-0-158-221</b></font>:<font color="#12488B"><b>~</b></font>$ sudo apt install python3-pip
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  build-essential bzip2 cpp cpp-11 dpkg-dev fakeroot fontconfig-config
+  fonts-dejavu-core g++ g++-11 gcc gcc-11 gcc-11-base javascript-common
+  libalgorithm-diff-perl libalgorithm-diff-xs-perl libalgorithm-merge-perl
+  libasan6 libatomic1 libc-dev-bin libc-devtools libc6-dev libcc1-0
+  libcrypt-dev libdeflate0 libdpkg-perl libexpat1-dev libfakeroot
+  libfile-fcntllock-perl libfontconfig1 libgcc-11-dev libgd3 libgomp1 libisl23
+  libitm1 libjbig0 libjpeg-turbo8 libjpeg8 libjs-jquery libjs-sphinxdoc
+  libjs-underscore liblsan0 libmpc3 libnsl-dev libpython3-dev libpython3.10
+  libpython3.10-dev libpython3.10-minimal libpython3.10-stdlib libquadmath0
+  libstdc++-11-dev libtiff5 libtirpc-dev libtsan0 libubsan1 libwebp7 libxpm4
+  linux-libc-dev lto-disabled-list make manpages-dev python3-dev python3-wheel
+  python3.10 python3.10-dev python3.10-minimal rpcsvc-proto zlib1g-dev
+Suggested packages:
+  bzip2-doc cpp-doc gcc-11-locales debian-keyring g++-multilib g++-11-multilib
+  gcc-11-doc gcc-multilib autoconf automake libtool flex bison gdb gcc-doc
+  gcc-11-multilib apache2 | lighttpd | httpd glibc-doc bzr libgd-tools
+  libstdc++-11-doc make-doc python3.10-venv python3.10-doc binfmt-support
+The following NEW packages will be installed:
+  build-essential bzip2 cpp cpp-11 dpkg-dev fakeroot fontconfig-config
+  fonts-dejavu-core g++ g++-11 gcc gcc-11 gcc-11-base javascript-common
+  libalgorithm-diff-perl libalgorithm-diff-xs-perl libalgorithm-merge-perl
+  libasan6 libatomic1 libc-dev-bin libc-devtools libc6-dev libcc1-0
+  libcrypt-dev libdeflate0 libdpkg-perl libexpat1-dev libfakeroot
+  libfile-fcntllock-perl libfontconfig1 libgcc-11-dev libgd3 libgomp1 libisl23
+  libitm1 libjbig0 libjpeg-turbo8 libjpeg8 libjs-jquery libjs-sphinxdoc
+  libjs-underscore liblsan0 libmpc3 libnsl-dev libpython3-dev
+  libpython3.10-dev libquadmath0 libstdc++-11-dev libtiff5 libtirpc-dev
+  libtsan0 libubsan1 libwebp7 libxpm4 linux-libc-dev lto-disabled-list make
+  manpages-dev python3-dev python3-pip python3-wheel python3.10-dev
+  rpcsvc-proto zlib1g-dev
+The following packages will be upgraded:
+  libpython3.10 libpython3.10-minimal libpython3.10-stdlib python3.10
+  python3.10-minimal
+5 upgraded, 64 newly installed, 0 to remove and 27 not upgraded.
+Need to get 78.5 MB of archives.
+After this operation, 239 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libpython3.10 amd64 3.10.6-1~22.04.2 [1955 kB]
+Get:2 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3.10 amd64 3.10.6-1~22.04.2 [497 kB]
+Get:3 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libpython3.10-stdlib amd64 3.10.6-1~22.04.2 [1832 kB]
+Get:4 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3.10-minimal amd64 3.10.6-1~22.04.2 [2251 kB]
+Get:5 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libpython3.10-minimal amd64 3.10.6-1~22.04.2 [810 kB]
+Get:6 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libc-dev-bin amd64 2.35-0ubuntu3.1 [20.4 kB]
+Get:7 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 linux-libc-dev amd64 5.15.0-57.63 [1348 kB]
+Get:8 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 libcrypt-dev amd64 1:4.4.27-1 [112 kB]
+Get:9 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 rpcsvc-proto amd64 1.4.2-0ubuntu6 [68.5 kB]
+Get:10 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libtirpc-dev amd64 1.3.2-2ubuntu0.1 [192 kB]
+Get:11 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 libnsl-dev amd64 1.3.0-2build2 [71.3 kB]
+Get:12 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libc6-dev amd64 2.35-0ubuntu3.1 [2099 kB]
+Get:13 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 gcc-11-base amd64 11.3.0-1ubuntu1~22.04 [20.8 kB]
+Get:14 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 libisl23 amd64 0.24-2build1 [727 kB]
+Get:15 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 libmpc3 amd64 1.2.1-2build1 [46.9 kB]
+Get:16 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 cpp-11 amd64 11.3.0-1ubuntu1~22.04 [9967 kB]
+Get:17 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 cpp amd64 4:11.2.0-1ubuntu1 [27.7 kB]
+Get:18 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libcc1-0 amd64 12.1.0-2ubuntu1~22.04 [47.4 kB]
+Get:19 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libgomp1 amd64 12.1.0-2ubuntu1~22.04 [126 kB]
+Get:20 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libitm1 amd64 12.1.0-2ubuntu1~22.04 [30.2 kB]
+Get:21 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libatomic1 amd64 12.1.0-2ubuntu1~22.04 [10.4 kB]
+Get:22 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libasan6 amd64 11.3.0-1ubuntu1~22.04 [2284 kB]
+Get:23 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 liblsan0 amd64 12.1.0-2ubuntu1~22.04 [1069 kB]
+Get:24 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libtsan0 amd64 11.3.0-1ubuntu1~22.04 [2262 kB]
+Get:25 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libubsan1 amd64 12.1.0-2ubuntu1~22.04 [976 kB]
+Get:26 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libquadmath0 amd64 12.1.0-2ubuntu1~22.04 [154 kB]
+Get:27 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libgcc-11-dev amd64 11.3.0-1ubuntu1~22.04 [2517 kB]
+Get:28 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 gcc-11 amd64 11.3.0-1ubuntu1~22.04 [20.1 MB]
+Get:29 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 gcc amd64 4:11.2.0-1ubuntu1 [5112 B]
+Get:30 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libstdc++-11-dev amd64 11.3.0-1ubuntu1~22.04 [2087 kB]
+Get:31 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 g++-11 amd64 11.3.0-1ubuntu1~22.04 [11.4 MB]
+Get:32 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 g++ amd64 4:11.2.0-1ubuntu1 [1412 B]
+Get:33 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 make amd64 4.3-4.1build1 [180 kB]
+Get:34 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libdpkg-perl all 1.21.1ubuntu2.1 [237 kB]
+Get:35 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 bzip2 amd64 1.0.8-5build1 [34.8 kB]
+Get:36 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 lto-disabled-list all 24 [12.5 kB]
+Get:37 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 dpkg-dev all 1.21.1ubuntu2.1 [922 kB]
+Get:38 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 build-essential amd64 12.9ubuntu3 [4744 B]
+Get:39 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 libfakeroot amd64 1.28-1ubuntu1 [31.5 kB]
+Get:40 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 fakeroot amd64 1.28-1ubuntu1 [60.4 kB]
+Get:41 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 fonts-dejavu-core all 2.37-2build1 [1041 kB]
+Get:42 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 fontconfig-config all 2.13.1-4.2ubuntu5 [29.1 kB]
+Get:43 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 javascript-common all 11+nmu1 [5936 B]
+Get:44 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 libalgorithm-diff-perl all 1.201-1 [41.8 kB]
+Get:45 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 libalgorithm-diff-xs-perl amd64 0.04-6build3 [11.9 kB]
+Get:46 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 libalgorithm-merge-perl all 0.08-3 [12.0 kB]
+Get:47 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 libfontconfig1 amd64 2.13.1-4.2ubuntu5 [131 kB]
+Get:48 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 libjpeg-turbo8 amd64 2.1.2-0ubuntu1 [134 kB]
+Get:49 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 libjpeg8 amd64 8c-2ubuntu10 [2264 B]
+Get:50 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 libdeflate0 amd64 1.10-2 [70.9 kB]
+Get:51 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libjbig0 amd64 2.1-3.1ubuntu0.22.04.1 [29.2 kB]
+Get:52 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 libwebp7 amd64 1.2.2-2 [206 kB]
+Get:53 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libtiff5 amd64 4.3.0-6ubuntu0.3 [183 kB]
+Get:54 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 libxpm4 amd64 1:3.5.12-1build2 [36.2 kB]
+Get:55 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 libgd3 amd64 2.3.0-2ubuntu2 [129 kB]
+Get:56 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libc-devtools amd64 2.35-0ubuntu3.1 [28.9 kB]
+Get:57 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libexpat1-dev amd64 2.4.7-1ubuntu0.2 [147 kB]
+Get:58 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 libfile-fcntllock-perl amd64 0.22-3build7 [33.9 kB]
+Get:59 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 libjs-jquery all 3.6.0+dfsg+~3.5.13-1 [321 kB]
+Get:60 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 libjs-underscore all 1.13.2~dfsg-2 [118 kB]
+Get:61 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 libjs-sphinxdoc all 4.3.2-1 [139 kB]
+Get:62 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 zlib1g-dev amd64 1:1.2.11.dfsg-2ubuntu9.2 [164 kB]
+Get:63 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libpython3.10-dev amd64 3.10.6-1~22.04.2 [4755 kB]
+Get:64 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libpython3-dev amd64 3.10.6-1~22.04 [7166 B]
+Get:65 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 manpages-dev all 5.10-1ubuntu1 [2309 kB]
+Get:66 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3.10-dev amd64 3.10.6-1~22.04.2 [507 kB]
+Get:67 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3-dev amd64 3.10.6-1~22.04 [26.0 kB]
+Get:68 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy/universe amd64 python3-wheel all 0.37.1-2 [31.9 kB]
+Get:69 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy/universe amd64 python3-pip all 22.0.2+dfsg-1 [1306 kB]
+Fetched 78.5 MB in 2s (35.1 MB/s)<font color="#A2734C">  </font>
+Extracting templates from packages: 100%
+(Reading database ... 63919 files and directories currently installed.)
+Preparing to unpack .../00-libpython3.10_3.10.6-1~22.04.2_amd64.deb ...
+Unpacking libpython3.10:amd64 (3.10.6-1~22.04.2) over (3.10.6-1~22.04.1) ...
+Preparing to unpack .../01-python3.10_3.10.6-1~22.04.2_amd64.deb ...
+Unpacking python3.10 (3.10.6-1~22.04.2) over (3.10.6-1~22.04.1) ...
+Preparing to unpack .../02-libpython3.10-stdlib_3.10.6-1~22.04.2_amd64.deb ...
+Unpacking libpython3.10-stdlib:amd64 (3.10.6-1~22.04.2) over (3.10.6-1~22.04.1) 
+...
+Preparing to unpack .../03-python3.10-minimal_3.10.6-1~22.04.2_amd64.deb ...
+Unpacking python3.10-minimal (3.10.6-1~22.04.2) over (3.10.6-1~22.04.1) ...
+Preparing to unpack .../04-libpython3.10-minimal_3.10.6-1~22.04.2_amd64.deb ...
+Unpacking libpython3.10-minimal:amd64 (3.10.6-1~22.04.2) over (3.10.6-1~22.04.1)
+ ...
+Selecting previously unselected package libc-dev-bin.
+Preparing to unpack .../05-libc-dev-bin_2.35-0ubuntu3.1_amd64.deb ...
+Unpacking libc-dev-bin (2.35-0ubuntu3.1) ...
+Selecting previously unselected package linux-libc-dev:amd64.
+Preparing to unpack .../06-linux-libc-dev_5.15.0-57.63_amd64.deb ...
+Unpacking linux-libc-dev:amd64 (5.15.0-57.63) ...
+Selecting previously unselected package libcrypt-dev:amd64.
+Preparing to unpack .../07-libcrypt-dev_1%3a4.4.27-1_amd64.deb ...
+Unpacking libcrypt-dev:amd64 (1:4.4.27-1) ...
+Selecting previously unselected package rpcsvc-proto.
+Preparing to unpack .../08-rpcsvc-proto_1.4.2-0ubuntu6_amd64.deb ...
+Unpacking rpcsvc-proto (1.4.2-0ubuntu6) ...
+Selecting previously unselected package libtirpc-dev:amd64.
+Preparing to unpack .../09-libtirpc-dev_1.3.2-2ubuntu0.1_amd64.deb ...
+Unpacking libtirpc-dev:amd64 (1.3.2-2ubuntu0.1) ...
+Selecting previously unselected package libnsl-dev:amd64.
+Preparing to unpack .../10-libnsl-dev_1.3.0-2build2_amd64.deb ...
+Unpacking libnsl-dev:amd64 (1.3.0-2build2) ...
+Selecting previously unselected package libc6-dev:amd64.
+Preparing to unpack .../11-libc6-dev_2.35-0ubuntu3.1_amd64.deb ...
+Unpacking libc6-dev:amd64 (2.35-0ubuntu3.1) ...
+Selecting previously unselected package gcc-11-base:amd64.
+Preparing to unpack .../12-gcc-11-base_11.3.0-1ubuntu1~22.04_amd64.deb ...
+Unpacking gcc-11-base:amd64 (11.3.0-1ubuntu1~22.04) ...
+Selecting previously unselected package libisl23:amd64.
+Preparing to unpack .../13-libisl23_0.24-2build1_amd64.deb ...
+Unpacking libisl23:amd64 (0.24-2build1) ...
+Selecting previously unselected package libmpc3:amd64.
+Preparing to unpack .../14-libmpc3_1.2.1-2build1_amd64.deb ...
+Unpacking libmpc3:amd64 (1.2.1-2build1) ...
+Selecting previously unselected package cpp-11.
+Preparing to unpack .../15-cpp-11_11.3.0-1ubuntu1~22.04_amd64.deb ...
+Unpacking cpp-11 (11.3.0-1ubuntu1~22.04) ...
+Selecting previously unselected package cpp.
+Preparing to unpack .../16-cpp_4%3a11.2.0-1ubuntu1_amd64.deb ...
+Unpacking cpp (4:11.2.0-1ubuntu1) ...
+Selecting previously unselected package libcc1-0:amd64.
+Preparing to unpack .../17-libcc1-0_12.1.0-2ubuntu1~22.04_amd64.deb ...
+Unpacking libcc1-0:amd64 (12.1.0-2ubuntu1~22.04) ...
+Selecting previously unselected package libgomp1:amd64.
+Preparing to unpack .../18-libgomp1_12.1.0-2ubuntu1~22.04_amd64.deb ...
+Unpacking libgomp1:amd64 (12.1.0-2ubuntu1~22.04) ...
+Selecting previously unselected package libitm1:amd64.
+Preparing to unpack .../19-libitm1_12.1.0-2ubuntu1~22.04_amd64.deb ...
+Unpacking libitm1:amd64 (12.1.0-2ubuntu1~22.04) ...
+Selecting previously unselected package libatomic1:amd64.
+Preparing to unpack .../20-libatomic1_12.1.0-2ubuntu1~22.04_amd64.deb ...
+Unpacking libatomic1:amd64 (12.1.0-2ubuntu1~22.04) ...
+Selecting previously unselected package libasan6:amd64.
+Preparing to unpack .../21-libasan6_11.3.0-1ubuntu1~22.04_amd64.deb ...
+Unpacking libasan6:amd64 (11.3.0-1ubuntu1~22.04) ...
+Selecting previously unselected package liblsan0:amd64.
+Preparing to unpack .../22-liblsan0_12.1.0-2ubuntu1~22.04_amd64.deb ...
+Unpacking liblsan0:amd64 (12.1.0-2ubuntu1~22.04) ...
+Selecting previously unselected package libtsan0:amd64.
+Preparing to unpack .../23-libtsan0_11.3.0-1ubuntu1~22.04_amd64.deb ...
+Unpacking libtsan0:amd64 (11.3.0-1ubuntu1~22.04) ...
+Selecting previously unselected package libubsan1:amd64.
+Preparing to unpack .../24-libubsan1_12.1.0-2ubuntu1~22.04_amd64.deb ...
+Unpacking libubsan1:amd64 (12.1.0-2ubuntu1~22.04) ...
+Selecting previously unselected package libquadmath0:amd64.
+Preparing to unpack .../25-libquadmath0_12.1.0-2ubuntu1~22.04_amd64.deb ...
+Unpacking libquadmath0:amd64 (12.1.0-2ubuntu1~22.04) ...
+Selecting previously unselected package libgcc-11-dev:amd64.
+Preparing to unpack .../26-libgcc-11-dev_11.3.0-1ubuntu1~22.04_amd64.deb ...
+Unpacking libgcc-11-dev:amd64 (11.3.0-1ubuntu1~22.04) ...
+Selecting previously unselected package gcc-11.
+Preparing to unpack .../27-gcc-11_11.3.0-1ubuntu1~22.04_amd64.deb ...
+Unpacking gcc-11 (11.3.0-1ubuntu1~22.04) ...
+Selecting previously unselected package gcc.
+Preparing to unpack .../28-gcc_4%3a11.2.0-1ubuntu1_amd64.deb ...
+Unpacking gcc (4:11.2.0-1ubuntu1) ...
+Selecting previously unselected package libstdc++-11-dev:amd64.
+Preparing to unpack .../29-libstdc++-11-dev_11.3.0-1ubuntu1~22.04_amd64.deb ...
+Unpacking libstdc++-11-dev:amd64 (11.3.0-1ubuntu1~22.04) ...
+Selecting previously unselected package g++-11.
+Preparing to unpack .../30-g++-11_11.3.0-1ubuntu1~22.04_amd64.deb ...
+Unpacking g++-11 (11.3.0-1ubuntu1~22.04) ...
+Selecting previously unselected package g++.
+Preparing to unpack .../31-g++_4%3a11.2.0-1ubuntu1_amd64.deb ...
+Unpacking g++ (4:11.2.0-1ubuntu1) ...
+Selecting previously unselected package make.
+Preparing to unpack .../32-make_4.3-4.1build1_amd64.deb ...
+Unpacking make (4.3-4.1build1) ...
+Selecting previously unselected package libdpkg-perl.
+Preparing to unpack .../33-libdpkg-perl_1.21.1ubuntu2.1_all.deb ...
+Unpacking libdpkg-perl (1.21.1ubuntu2.1) ...
+Selecting previously unselected package bzip2.
+Preparing to unpack .../34-bzip2_1.0.8-5build1_amd64.deb ...
+Unpacking bzip2 (1.0.8-5build1) ...
+Selecting previously unselected package lto-disabled-list.
+Preparing to unpack .../35-lto-disabled-list_24_all.deb ...
+Unpacking lto-disabled-list (24) ...
+Selecting previously unselected package dpkg-dev.
+Preparing to unpack .../36-dpkg-dev_1.21.1ubuntu2.1_all.deb ...
+Unpacking dpkg-dev (1.21.1ubuntu2.1) ...
+Selecting previously unselected package build-essential.
+Preparing to unpack .../37-build-essential_12.9ubuntu3_amd64.deb ...
+Unpacking build-essential (12.9ubuntu3) ...
+Selecting previously unselected package libfakeroot:amd64.
+Preparing to unpack .../38-libfakeroot_1.28-1ubuntu1_amd64.deb ...
+Unpacking libfakeroot:amd64 (1.28-1ubuntu1) ...
+Selecting previously unselected package fakeroot.
+Preparing to unpack .../39-fakeroot_1.28-1ubuntu1_amd64.deb ...
+Unpacking fakeroot (1.28-1ubuntu1) ...
+Selecting previously unselected package fonts-dejavu-core.
+Preparing to unpack .../40-fonts-dejavu-core_2.37-2build1_all.deb ...
+Unpacking fonts-dejavu-core (2.37-2build1) ...
+Selecting previously unselected package fontconfig-config.
+Preparing to unpack .../41-fontconfig-config_2.13.1-4.2ubuntu5_all.deb ...
+Unpacking fontconfig-config (2.13.1-4.2ubuntu5) ...
+Selecting previously unselected package javascript-common.
+Preparing to unpack .../42-javascript-common_11+nmu1_all.deb ...
+Unpacking javascript-common (11+nmu1) ...
+Selecting previously unselected package libalgorithm-diff-perl.
+Preparing to unpack .../43-libalgorithm-diff-perl_1.201-1_all.deb ...
+Unpacking libalgorithm-diff-perl (1.201-1) ...
+Selecting previously unselected package libalgorithm-diff-xs-perl.
+Preparing to unpack .../44-libalgorithm-diff-xs-perl_0.04-6build3_amd64.deb ...
+Unpacking libalgorithm-diff-xs-perl (0.04-6build3) ...
+Selecting previously unselected package libalgorithm-merge-perl.
+Preparing to unpack .../45-libalgorithm-merge-perl_0.08-3_all.deb ...
+Unpacking libalgorithm-merge-perl (0.08-3) ...
+Selecting previously unselected package libfontconfig1:amd64.
+Preparing to unpack .../46-libfontconfig1_2.13.1-4.2ubuntu5_amd64.deb ...
+Unpacking libfontconfig1:amd64 (2.13.1-4.2ubuntu5) ...
+Selecting previously unselected package libjpeg-turbo8:amd64.
+Preparing to unpack .../47-libjpeg-turbo8_2.1.2-0ubuntu1_amd64.deb ...
+Unpacking libjpeg-turbo8:amd64 (2.1.2-0ubuntu1) ...
+Selecting previously unselected package libjpeg8:amd64.
+Preparing to unpack .../48-libjpeg8_8c-2ubuntu10_amd64.deb ...
+Unpacking libjpeg8:amd64 (8c-2ubuntu10) ...
+Selecting previously unselected package libdeflate0:amd64.
+Preparing to unpack .../49-libdeflate0_1.10-2_amd64.deb ...
+Unpacking libdeflate0:amd64 (1.10-2) ...
+Selecting previously unselected package libjbig0:amd64.
+Preparing to unpack .../50-libjbig0_2.1-3.1ubuntu0.22.04.1_amd64.deb ...
+Unpacking libjbig0:amd64 (2.1-3.1ubuntu0.22.04.1) ...
+Selecting previously unselected package libwebp7:amd64.
+Preparing to unpack .../51-libwebp7_1.2.2-2_amd64.deb ...
+Unpacking libwebp7:amd64 (1.2.2-2) ...
+Selecting previously unselected package libtiff5:amd64.
+Preparing to unpack .../52-libtiff5_4.3.0-6ubuntu0.3_amd64.deb ...
+Unpacking libtiff5:amd64 (4.3.0-6ubuntu0.3) ...
+Selecting previously unselected package libxpm4:amd64.
+Preparing to unpack .../53-libxpm4_1%3a3.5.12-1build2_amd64.deb ...
+Unpacking libxpm4:amd64 (1:3.5.12-1build2) ...
+Selecting previously unselected package libgd3:amd64.
+Preparing to unpack .../54-libgd3_2.3.0-2ubuntu2_amd64.deb ...
+Unpacking libgd3:amd64 (2.3.0-2ubuntu2) ...
+Selecting previously unselected package libc-devtools.
+Preparing to unpack .../55-libc-devtools_2.35-0ubuntu3.1_amd64.deb ...
+Unpacking libc-devtools (2.35-0ubuntu3.1) ...
+Selecting previously unselected package libexpat1-dev:amd64.
+Preparing to unpack .../56-libexpat1-dev_2.4.7-1ubuntu0.2_amd64.deb ...
+Unpacking libexpat1-dev:amd64 (2.4.7-1ubuntu0.2) ...
+Selecting previously unselected package libfile-fcntllock-perl.
+Preparing to unpack .../57-libfile-fcntllock-perl_0.22-3build7_amd64.deb ...
+Unpacking libfile-fcntllock-perl (0.22-3build7) ...
+Selecting previously unselected package libjs-jquery.
+Preparing to unpack .../58-libjs-jquery_3.6.0+dfsg+~3.5.13-1_all.deb ...
+Unpacking libjs-jquery (3.6.0+dfsg+~3.5.13-1) ...
+Selecting previously unselected package libjs-underscore.
+Preparing to unpack .../59-libjs-underscore_1.13.2~dfsg-2_all.deb ...
+Unpacking libjs-underscore (1.13.2~dfsg-2) ...
+Selecting previously unselected package libjs-sphinxdoc.
+Preparing to unpack .../60-libjs-sphinxdoc_4.3.2-1_all.deb ...
+Unpacking libjs-sphinxdoc (4.3.2-1) ...
+Selecting previously unselected package zlib1g-dev:amd64.
+Preparing to unpack .../61-zlib1g-dev_1%3a1.2.11.dfsg-2ubuntu9.2_amd64.deb ...
+Unpacking zlib1g-dev:amd64 (1:1.2.11.dfsg-2ubuntu9.2) ...
+Selecting previously unselected package libpython3.10-dev:amd64.
+Preparing to unpack .../62-libpython3.10-dev_3.10.6-1~22.04.2_amd64.deb ...
+Unpacking libpython3.10-dev:amd64 (3.10.6-1~22.04.2) ...
+Selecting previously unselected package libpython3-dev:amd64.
+Preparing to unpack .../63-libpython3-dev_3.10.6-1~22.04_amd64.deb ...
+Unpacking libpython3-dev:amd64 (3.10.6-1~22.04) ...
+Selecting previously unselected package manpages-dev.
+Preparing to unpack .../64-manpages-dev_5.10-1ubuntu1_all.deb ...
+Unpacking manpages-dev (5.10-1ubuntu1) ...
+Selecting previously unselected package python3.10-dev.
+Preparing to unpack .../65-python3.10-dev_3.10.6-1~22.04.2_amd64.deb ...
+Unpacking python3.10-dev (3.10.6-1~22.04.2) ...
+Selecting previously unselected package python3-dev.
+Preparing to unpack .../66-python3-dev_3.10.6-1~22.04_amd64.deb ...
+Unpacking python3-dev (3.10.6-1~22.04) ...
+Selecting previously unselected package python3-wheel.
+Preparing to unpack .../67-python3-wheel_0.37.1-2_all.deb ...
+Unpacking python3-wheel (0.37.1-2) ...
+Selecting previously unselected package python3-pip.
+Preparing to unpack .../68-python3-pip_22.0.2+dfsg-1_all.deb ...
+Unpacking python3-pip (22.0.2+dfsg-1) ...
+Setting up javascript-common (11+nmu1) ...
+Setting up gcc-11-base:amd64 (11.3.0-1ubuntu1~22.04) ...
+Setting up manpages-dev (5.10-1ubuntu1) ...
+Setting up lto-disabled-list (24) ...
+Setting up libxpm4:amd64 (1:3.5.12-1build2) ...
+Setting up libfile-fcntllock-perl (0.22-3build7) ...
+Setting up libalgorithm-diff-perl (1.201-1) ...
+Setting up libdeflate0:amd64 (1.10-2) ...
+Setting up linux-libc-dev:amd64 (5.15.0-57.63) ...
+Setting up libgomp1:amd64 (12.1.0-2ubuntu1~22.04) ...
+Setting up bzip2 (1.0.8-5build1) ...
+Setting up python3-wheel (0.37.1-2) ...
+Setting up libjbig0:amd64 (2.1-3.1ubuntu0.22.04.1) ...
+Setting up libfakeroot:amd64 (1.28-1ubuntu1) ...
+Setting up libasan6:amd64 (11.3.0-1ubuntu1~22.04) ...
+Setting up fakeroot (1.28-1ubuntu1) ...
+update-alternatives: using /usr/bin/fakeroot-sysv to provide /usr/bin/fakeroot (
+fakeroot) in auto mode
+Setting up libtirpc-dev:amd64 (1.3.2-2ubuntu0.1) ...
+Setting up rpcsvc-proto (1.4.2-0ubuntu6) ...
+Setting up make (4.3-4.1build1) ...
+Setting up libquadmath0:amd64 (12.1.0-2ubuntu1~22.04) ...
+Setting up libmpc3:amd64 (1.2.1-2build1) ...
+Setting up libatomic1:amd64 (12.1.0-2ubuntu1~22.04) ...
+Setting up libpython3.10-minimal:amd64 (3.10.6-1~22.04.2) ...
+Setting up fonts-dejavu-core (2.37-2build1) ...
+Setting up python3-pip (22.0.2+dfsg-1) ...
+Setting up libjpeg-turbo8:amd64 (2.1.2-0ubuntu1) ...
+Setting up libdpkg-perl (1.21.1ubuntu2.1) ...
+Setting up libwebp7:amd64 (1.2.2-2) ...
+Setting up libubsan1:amd64 (12.1.0-2ubuntu1~22.04) ...
+Setting up libnsl-dev:amd64 (1.3.0-2build2) ...
+Setting up libcrypt-dev:amd64 (1:4.4.27-1) ...
+Setting up libjs-jquery (3.6.0+dfsg+~3.5.13-1) ...
+Setting up libisl23:amd64 (0.24-2build1) ...
+Setting up libc-dev-bin (2.35-0ubuntu3.1) ...
+Setting up libalgorithm-diff-xs-perl (0.04-6build3) ...
+Setting up libcc1-0:amd64 (12.1.0-2ubuntu1~22.04) ...
+Setting up liblsan0:amd64 (12.1.0-2ubuntu1~22.04) ...
+Setting up libitm1:amd64 (12.1.0-2ubuntu1~22.04) ...
+Setting up libjs-underscore (1.13.2~dfsg-2) ...
+Setting up libalgorithm-merge-perl (0.08-3) ...
+Setting up libtsan0:amd64 (11.3.0-1ubuntu1~22.04) ...
+Setting up libjpeg8:amd64 (8c-2ubuntu10) ...
+Setting up cpp-11 (11.3.0-1ubuntu1~22.04) ...
+Setting up fontconfig-config (2.13.1-4.2ubuntu5) ...
+Setting up python3.10-minimal (3.10.6-1~22.04.2) ...
+Setting up dpkg-dev (1.21.1ubuntu2.1) ...
+Setting up libpython3.10-stdlib:amd64 (3.10.6-1~22.04.2) ...
+Setting up libjs-sphinxdoc (4.3.2-1) ...
+Setting up libgcc-11-dev:amd64 (11.3.0-1ubuntu1~22.04) ...
+Setting up gcc-11 (11.3.0-1ubuntu1~22.04) ...
+Setting up cpp (4:11.2.0-1ubuntu1) ...
+Setting up libc6-dev:amd64 (2.35-0ubuntu3.1) ...
+Setting up libtiff5:amd64 (4.3.0-6ubuntu0.3) ...
+Setting up libfontconfig1:amd64 (2.13.1-4.2ubuntu5) ...
+Setting up libpython3.10:amd64 (3.10.6-1~22.04.2) ...
+Setting up python3.10 (3.10.6-1~22.04.2) ...
+Setting up gcc (4:11.2.0-1ubuntu1) ...
+Setting up libexpat1-dev:amd64 (2.4.7-1ubuntu0.2) ...
+Setting up libgd3:amd64 (2.3.0-2ubuntu2) ...
+Setting up libstdc++-11-dev:amd64 (11.3.0-1ubuntu1~22.04) ...
+Setting up zlib1g-dev:amd64 (1:1.2.11.dfsg-2ubuntu9.2) ...
+Setting up libc-devtools (2.35-0ubuntu3.1) ...
+Setting up g++-11 (11.3.0-1ubuntu1~22.04) ...
+Setting up libpython3.10-dev:amd64 (3.10.6-1~22.04.2) ...
+Setting up python3.10-dev (3.10.6-1~22.04.2) ...
+Setting up g++ (4:11.2.0-1ubuntu1) ...
+update-alternatives: using /usr/bin/g++ to provide /usr/bin/c++ (c++) in auto mo
+de
+Setting up build-essential (12.9ubuntu3) ...
+Setting up libpython3-dev:amd64 (3.10.6-1~22.04) ...
+Setting up python3-dev (3.10.6-1~22.04) ...
+Processing triggers for man-db (2.10.2-1) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.1) ...
+Scanning processes...                                                           
+Scanning candidates...                                                          
+Scanning linux images...                                                        
+
+Running kernel seems to be up-to-date.
+
+Restarting services...
+Service restarts being deferred:
+ systemctl restart networkd-dispatcher.service
+ systemctl restart unattended-upgrades.service
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+<font color="#26A269"><b>ubuntu@ip-10-0-158-221</b></font>:<font color="#12488B"><b>~</b></font>$ pip install Flask
+Defaulting to user installation because normal site-packages is not writeable
+Collecting Flask
+  Downloading Flask-2.2.2-py3-none-any.whl (101 kB)
+     <font color="#87AF5F">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</font> <font color="#26A269">101.5/101.5 KB</font> <font color="#C01C28">2.8 MB/s</font> eta <font color="#2AA1B3">0:00:00</font>
+Requirement already satisfied: click&gt;=8.0 in /usr/lib/python3/dist-packages (from Flask) (8.0.3)
+Collecting itsdangerous&gt;=2.0
+  Downloading itsdangerous-2.1.2-py3-none-any.whl (15 kB)
+Collecting Werkzeug&gt;=2.2.2
+  Downloading Werkzeug-2.2.2-py3-none-any.whl (232 kB)
+     <font color="#87AF5F">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</font> <font color="#26A269">232.7/232.7 KB</font> <font color="#C01C28">5.8 MB/s</font> eta <font color="#2AA1B3">0:00:00</font>
+Requirement already satisfied: Jinja2&gt;=3.0 in /usr/lib/python3/dist-packages (from Flask) (3.0.3)
+Collecting MarkupSafe&gt;=2.1.1
+  Downloading MarkupSafe-2.1.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (25 kB)
+Installing collected packages: MarkupSafe, itsdangerous, Werkzeug, Flask
+<font color="#A2734C">  WARNING: The script flask is installed in &apos;/home/ubuntu/.local/bin&apos; which is not on PATH.</font>
+<font color="#A2734C">  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.</font>
+Successfully installed Flask-2.2.2 MarkupSafe-2.1.1 Werkzeug-2.2.2 itsdangerous-2.1.2
+<font color="#26A269"><b>ubuntu@ip-10-0-158-221</b></font>:<font color="#12488B"><b>~</b></font>$ sudo apt install python3-flask
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  python3-itsdangerous python3-pyinotify python3-simplejson python3-werkzeug
+Suggested packages:
+  python3-asgiref python3-dotenv python-flask-doc python-pyinotify-doc
+  ipython3 python-werkzeug-doc python3-lxml python3-watchdog
+The following NEW packages will be installed:
+  python3-flask python3-itsdangerous python3-pyinotify python3-simplejson
+  python3-werkzeug
+0 upgraded, 5 newly installed, 0 to remove and 27 not upgraded.
+Need to get 356 kB of archives.
+After this operation, 1761 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 python3-itsdangerous all 2.1.0-1 [14.7 kB]
+Get:2 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 python3-werkzeug all 2.0.2+dfsg1-1 [180 kB]
+Get:3 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 python3-flask all 2.0.1-2ubuntu1 [81.5 kB]
+Get:4 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 python3-pyinotify all 0.9.6-1.3 [24.8 kB]
+Get:5 http://us-west-2.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 python3-simplejson amd64 3.17.6-1build1 [54.7 kB]
+Fetched 356 kB in 1s (674 kB/s)<font color="#A2734C">          </font>
+Selecting previously unselected package python3-itsdangerous.
+(Reading database ... 70702 files and directories currently installed.)
+Preparing to unpack .../python3-itsdangerous_2.1.0-1_all.deb ...
+Unpacking python3-itsdangerous (2.1.0-1) ...
+Selecting previously unselected package python3-werkzeug.
+Preparing to unpack .../python3-werkzeug_2.0.2+dfsg1-1_all.deb ...
+Unpacking python3-werkzeug (2.0.2+dfsg1-1) ...
+Selecting previously unselected package python3-flask.
+Preparing to unpack .../python3-flask_2.0.1-2ubuntu1_all.deb ...
+Unpacking python3-flask (2.0.1-2ubuntu1) ...
+Selecting previously unselected package python3-pyinotify.
+Preparing to unpack .../python3-pyinotify_0.9.6-1.3_all.deb ...
+Unpacking python3-pyinotify (0.9.6-1.3) ...
+Selecting previously unselected package python3-simplejson.
+Preparing to unpack .../python3-simplejson_3.17.6-1build1_amd64.deb ...
+Unpacking python3-simplejson (3.17.6-1build1) ...
+Setting up python3-pyinotify (0.9.6-1.3) ...
+Setting up python3-itsdangerous (2.1.0-1) ...
+Setting up python3-simplejson (3.17.6-1build1) ...
+Setting up python3-werkzeug (2.0.2+dfsg1-1) ...
+Setting up python3-flask (2.0.1-2ubuntu1) ...
+Scanning processes...                                                           
+Scanning candidates...                                                          
+Scanning linux images...                                                        
+
+Running kernel seems to be up-to-date.
+
+Restarting services...
+Service restarts being deferred:
+ systemctl restart networkd-dispatcher.service
+ systemctl restart unattended-upgrades.service
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+<font color="#26A269"><b>ubuntu@ip-10-0-158-221</b></font>:<font color="#12488B"><b>~</b></font>$ cd /srv
+<font color="#26A269"><b>ubuntu@ip-10-0-158-221</b></font>:<font color="#12488B"><b>/srv</b></font>$ sudo mkdir hostname
+<font color="#26A269"><b>ubuntu@ip-10-0-158-221</b></font>:<font color="#12488B"><b>/srv</b></font>$ sudo mv ~/hostname.py hostname/
+<font color="#26A269"><b>ubuntu@ip-10-0-158-221</b></font>:<font color="#12488B"><b>/srv</b></font>$ ls hostname/
+hostname.py
+<font color="#26A269"><b>ubuntu@ip-10-0-158-221</b></font>:<font color="#12488B"><b>/srv</b></font>$ cd hostname/
+<font color="#26A269"><b>ubuntu@ip-10-0-158-221</b></font>:<font color="#12488B"><b>/srv/hostname</b></font>$ sudo vim hostname.py
+<font color="#26A269"><b>ubuntu@ip-10-0-158-221</b></font>:<font color="#12488B"><b>/srv/hostname</b></font>$ export FLASK_APP=hostname.py
+<font color="#26A269"><b>ubuntu@ip-10-0-158-221</b></font>:<font color="#12488B"><b>/srv/hostname</b></font>$ flask run --host 0.0.0.0
+ * Serving Flask app &apos;hostname.py&apos;
+ * Debug mode: off
+<font color="#C01C28"><b>WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.</b></font>
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.158.221:5000
+<font color="#A2734C">Press CTRL+C to quit</font>
+^C<font color="#26A269"><b>ubuntu@ip-10-0-158-221</b></font>:<font color="#12488B"><b>/srv/hostname</b></font>$ flask run --host 0.0.0.0
+ * Serving Flask app &apos;hostname.py&apos;
+ * Debug mode: off
+<font color="#C01C28"><b>WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.</b></font>
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.158.221:5000
+<font color="#A2734C">Press CTRL+C to quit</font>
+^C<font color="#26A269"><b>ubuntu@ip-10-0-158-221</b></font>:<font color="#12488B"><b>/srv/hostname</b></font>$ ping 8.8.8.8
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=107 time=7.51 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=107 time=6.92 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=107 time=6.96 ms
+64 bytes from 8.8.8.8: icmp_seq=4 ttl=107 time=6.92 ms
+^C
+--- 8.8.8.8 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3004ms
+rtt min/avg/max/mdev = 6.915/7.074/7.507/0.250 ms
+<font color="#26A269"><b>ubuntu@ip-10-0-158-221</b></font>:<font color="#12488B"><b>/srv/hostname</b></font>$ client_loop: send disconnect: Broken pipe
+client_loop: send disconnect: Broken pipe
+<font color="#26A269"><b>motunrayo@motunrayo-HP-Laptop-14-dq4xxx</b></font>:<font color="#12488B"><b>~</b></font>$ ssh -J ubuntu@54.191.184.24 ubuntu@10.0.158.221
+Welcome to Ubuntu 22.04.1 LTS (GNU/Linux 5.15.0-1026-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Tue Jan 10 10:35:04 UTC 2023
+
+  System load:  0.0                Processes:             99
+  Usage of /:   10.0% of 19.20GB   Users logged in:       1
+  Memory usage: 25%                IPv4 address for eth0: 10.0.158.221
+  Swap usage:   0%
+
+
+27 updates can be applied immediately.
+12 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+
+Last login: Tue Jan 10 10:02:35 2023 from 10.0.13.127
+<font color="#26A269"><b>ubuntu@ip-10-0-158-221</b></font>:<font color="#12488B"><b>~</b></font>$ cd /srv/hostname/
+<font color="#26A269"><b>ubuntu@ip-10-0-158-221</b></font>:<font color="#12488B"><b>/srv/hostname</b></font>$ export FLASK_APP=hostname.py
+<font color="#26A269"><b>ubuntu@ip-10-0-158-221</b></font>:<font color="#12488B"><b>/srv/hostname</b></font>$ flask run --host 0.0.0.0
+ * Serving Flask app &apos;hostname.py&apos;
+ * Debug mode: off
+<font color="#C01C28"><b>WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.</b></font>
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.158.221:5000
+<font color="#A2734C">Press CTRL+C to quit</font>
+^C<font color="#26A269"><b>ubuntu@ip-10-0-158-221</b></font>:<font color="#12488B"><b>/srv/hostname</b></font>$ ^C
+<font color="#26A269"><b>ubuntu@ip-10-0-158-221</b></font>:<font color="#12488B"><b>/srv/hostname</b></font>$ exit
+logout
+Connection to 10.0.158.221 closed.
+<font color="#26A269"><b>motunrayo@motunrayo-HP-Laptop-14-dq4xxx</b></font>:<font color="#12488B"><b>~</b></font>$ ssh -J ubuntu@54.191.184.24 ubuntu@10.0.158.221
+Welcome to Ubuntu 22.04.1 LTS (GNU/Linux 5.15.0-1026-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Tue Jan 10 15:12:37 UTC 2023
+
+  System load:  0.0                Processes:             98
+  Usage of /:   10.6% of 19.20GB   Users logged in:       0
+  Memory usage: 25%                IPv4 address for eth0: 10.0.158.221
+  Swap usage:   0%
+
+ * Ubuntu Pro delivers the most comprehensive open source security and
+   compliance features.
+
+   https://ubuntu.com/aws/pro
+
+27 updates can be applied immediately.
+12 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+
+Last login: Tue Jan 10 10:35:05 2023 from 10.0.13.127
+<font color="#26A269"><b>ubuntu@ip-10-0-158-221</b></font>:<font color="#12488B"><b>~</b></font>$ cd /srv
+<font color="#26A269"><b>ubuntu@ip-10-0-158-221</b></font>:<font color="#12488B"><b>/srv</b></font>$ ls
+<font color="#12488B"><b>hostname</b></font>
+<font color="#26A269"><b>ubuntu@ip-10-0-158-221</b></font>:<font color="#12488B"><b>/srv</b></font>$ cd hostname
+<font color="#26A269"><b>ubuntu@ip-10-0-158-221</b></font>:<font color="#12488B"><b>/srv/hostname</b></font>$ export FLASK_APP=hostname.py
+<font color="#26A269"><b>ubuntu@ip-10-0-158-221</b></font>:<font color="#12488B"><b>/srv/hostname</b></font>$ flask run --host 0.0.0.0
+ * Serving Flask app &apos;hostname.py&apos;
+ * Debug mode: off
+<font color="#C01C28"><b>WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.</b></font>
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.158.221:5000
+<font color="#A2734C">Press CTRL+C to quit</font>
+^C<font color="#26A269"><b>ubuntu@ip-10-0-158-221</b></font>:<font color="#12488B"><b>/srv/hostname</b></font>$ exit
+logout
+Connection to 10.0.158.221 closed.
+<font color="#26A269"><b>motunrayo@motunrayo-HP-Laptop-14-dq4xxx</b></font>:<font color="#12488B"><b>~</b></font>$ ssh -J ubuntu@54.191.184.24 ubuntu@10.0.158.221
+Welcome to Ubuntu 22.04.1 LTS (GNU/Linux 5.15.0-1026-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Tue Jan 10 15:47:56 UTC 2023
+
+  System load:  0.0                Processes:             98
+  Usage of /:   10.6% of 19.20GB   Users logged in:       0
+  Memory usage: 25%                IPv4 address for eth0: 10.0.158.221
+  Swap usage:   0%
+
+ * Ubuntu Pro delivers the most comprehensive open source security and
+   compliance features.
+
+   https://ubuntu.com/aws/pro
+
+27 updates can be applied immediately.
+12 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+
+Last login: Tue Jan 10 15:12:38 2023 from 10.0.13.127
+<font color="#26A269"><b>ubuntu@ip-10-0-158-221</b></font>:<font color="#12488B"><b>~</b></font>$ cd /srv/hostname
+<font color="#26A269"><b>ubuntu@ip-10-0-158-221</b></font>:<font color="#12488B"><b>/srv/hostname</b></font>$ export FLASK_APP=hostname.py
+<font color="#26A269"><b>ubuntu@ip-10-0-158-221</b></font>:<font color="#12488B"><b>/srv/hostname</b></font>$ flask run --host 0.0.0.0
+ * Serving Flask app &apos;hostname.py&apos;
+ * Debug mode: off
+<font color="#C01C28"><b>WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.</b></font>
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.158.221:5000
+<font color="#A2734C">Press CTRL+C to quit</font>
+^C<font color="#26A269"><b>ubuntu@ip-10-0-158-221</b></font>:<font color="#12488B"><b>/srv/hostname</b></font>$ flask run
+ * Serving Flask app &apos;hostname.py&apos;
+ * Debug mode: off
+<font color="#C01C28"><b>WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.</b></font>
+ * Running on http://127.0.0.1:5000
+<font color="#A2734C">Press CTRL+C to quit</font>
+^C<font color="#26A269"><b>ubuntu@ip-10-0-158-221</b></font>:<font color="#12488B"><b>/srv/hostname</b></font>$ flask run --host 0.0.0.0
+ * Serving Flask app &apos;hostname.py&apos;
+ * Debug mode: off
+<font color="#C01C28"><b>WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.</b></font>
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.158.221:5000
+<font color="#A2734C">Press CTRL+C to quit</font>
+^C<font color="#26A269"><b>ubuntu@ip-10-0-158-221</b></font>:<font color="#12488B"><b>/srv/hostname</b></font>$ sudo vim hostname.py 
+<font color="#26A269"><b>ubuntu@ip-10-0-158-221</b></font>:<font color="#12488B"><b>/srv/hostname</b></font>$ client_loop: send disconnect: Broken pipe
+client_loop: send disconnect: Broken pipe
+<font color="#26A269"><b>motunrayo@motunrayo-HP-Laptop-14-dq4xxx</b></font>:<font color="#12488B"><b>~</b></font>$ ssh -J ubuntu@54.191.184.24 ubuntu@10.0.158.221
+Welcome to Ubuntu 22.04.1 LTS (GNU/Linux 5.15.0-1026-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Tue Jan 10 16:26:24 UTC 2023
+
+  System load:  0.0                Processes:             99
+  Usage of /:   10.6% of 19.20GB   Users logged in:       1
+  Memory usage: 26%                IPv4 address for eth0: 10.0.158.221
+  Swap usage:   0%
+
+ * Ubuntu Pro delivers the most comprehensive open source security and
+   compliance features.
+
+   https://ubuntu.com/aws/pro
+
+27 updates can be applied immediately.
+12 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+
+Last login: Tue Jan 10 15:47:57 2023 from 10.0.13.127
+<font color="#26A269"><b>ubuntu@ip-10-0-158-221</b></font>:<font color="#12488B"><b>~</b></font>$ cd /srv/hostname
+<font color="#26A269"><b>ubuntu@ip-10-0-158-221</b></font>:<font color="#12488B"><b>/srv/hostname</b></font>$ export FLASK_APP=hostname.py
+<font color="#26A269"><b>ubuntu@ip-10-0-158-221</b></font>:<font color="#12488B"><b>/srv/hostname</b></font>$ cd /srv/hostname
+<font color="#26A269"><b>ubuntu@ip-10-0-158-221</b></font>:<font color="#12488B"><b>/srv/hostname</b></font>$ export FLASK_APP=hostname.py
+<font color="#26A269"><b>ubuntu@ip-10-0-158-221</b></font>:<font color="#12488B"><b>/srv/hostname</b></font>$ flask run --host 0.0.0.0
+ * Serving Flask app &apos;hostname.py&apos;
+ * Debug mode: off
+<font color="#C01C28"><b>WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.</b></font>
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.158.221:5000
+<font color="#A2734C">Press CTRL+C to quit</font>
+10.0.7.216 - - [10/Jan/2023 16:26:56] &quot;GET / HTTP/1.1&quot; 200 -
+10.0.30.7 - - [10/Jan/2023 16:26:59] &quot;GET / HTTP/1.1&quot; 200 -
+10.0.7.216 - - [10/Jan/2023 16:27:26] &quot;GET / HTTP/1.1&quot; 200 -
+10.0.30.7 - - [10/Jan/2023 16:27:29] &quot;GET / HTTP/1.1&quot; 200 -
+10.0.7.216 - - [10/Jan/2023 16:27:56] &quot;GET / HTTP/1.1&quot; 200 -
+10.0.30.7 - - [10/Jan/2023 16:27:59] &quot;GET / HTTP/1.1&quot; 200 -
+10.0.7.216 - - [10/Jan/2023 16:28:26] &quot;GET / HTTP/1.1&quot; 200 -
+10.0.30.7 - - [10/Jan/2023 16:28:29] &quot;GET / HTTP/1.1&quot; 200 -
+10.0.7.216 - - [10/Jan/2023 16:28:56] &quot;GET / HTTP/1.1&quot; 200 -
+10.0.30.7 - - [10/Jan/2023 16:28:59] &quot;GET / HTTP/1.1&quot; 200 -
+^C<font color="#26A269"><b>ubuntu@ip-10-0-158-221</b></font>:<font color="#12488B"><b>/srv/hostname</b></font>$ sudo vim hostname.py 
+<font color="#26A269"><b>ubuntu@ip-10-0-158-221</b></font>:<font color="#12488B"><b>/srv/hostname</b></font>$ flask run --host 0.0.0.0
+ * Serving Flask app &apos;hostname.py&apos;
+ * Debug mode: off
+<font color="#C01C28"><b>WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.</b></font>
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.158.221:5000
+<font color="#A2734C">Press CTRL+C to quit</font>
+10.0.30.7 - - [10/Jan/2023 16:44:45] &quot;GET / HTTP/1.1&quot; 200 -
+10.0.7.216 - - [10/Jan/2023 16:44:57] &quot;GET / HTTP/1.1&quot; 200 -
+10.0.30.7 - - [10/Jan/2023 16:45:00] &quot;GET / HTTP/1.1&quot; 200 -
+10.0.30.7 - - [10/Jan/2023 16:45:13] &quot;GET / HTTP/1.1&quot; 200 -
+10.0.30.7 - - [10/Jan/2023 16:45:16] &quot;GET / HTTP/1.1&quot; 200 -
+10.0.30.7 - - [10/Jan/2023 16:45:17] &quot;GET / HTTP/1.1&quot; 200 -
+10.0.30.7 - - [10/Jan/2023 16:45:18] &quot;GET / HTTP/1.1&quot; 200 -
+10.0.7.216 - - [10/Jan/2023 16:45:27] &quot;GET / HTTP/1.1&quot; 200 -
+10.0.30.7 - - [10/Jan/2023 16:45:30] &quot;GET / HTTP/1.1&quot; 200 -
+10.0.30.7 - - [10/Jan/2023 16:45:46] &quot;GET / HTTP/1.1&quot; 200 -
+10.0.30.7 - - [10/Jan/2023 16:45:55] &quot;GET / HTTP/1.1&quot; 200 -
+10.0.7.216 - - [10/Jan/2023 16:45:57] &quot;GET / HTTP/1.1&quot; 200 -
+10.0.30.7 - - [10/Jan/2023 16:46:00] &quot;GET / HTTP/1.1&quot; 200 -
+10.0.7.216 - - [10/Jan/2023 16:46:27] &quot;GET / HTTP/1.1&quot; 200 -
+10.0.30.7 - - [10/Jan/2023 16:46:30] &quot;GET / HTTP/1.1&quot; 200 -
+10.0.7.216 - - [10/Jan/2023 16:46:57] &quot;GET / HTTP/1.1&quot; 200 -
+10.0.30.7 - - [10/Jan/2023 16:47:00] &quot;GET / HTTP/1.1&quot; 200 -
+10.0.7.216 - - [10/Jan/2023 16:47:27] &quot;GET / HTTP/1.1&quot; 200 -
+10.0.30.7 - - [10/Jan/2023 16:47:30] &quot;GET / HTTP/1.1&quot; 200 -
+10.0.7.216 - - [10/Jan/2023 16:47:57] &quot;GET / HTTP/1.1&quot; 200 -
+10.0.30.7 - - [10/Jan/2023 16:48:00] &quot;GET / HTTP/1.1&quot; 200 -
+10.0.30.7 - - [10/Jan/2023 16:48:15] &quot;GET / HTTP/1.1&quot; 200 -
+10.0.7.216 - - [10/Jan/2023 16:48:27] &quot;GET / HTTP/1.1&quot; 200 -
+10.0.30.7 - - [10/Jan/2023 16:48:30] &quot;GET / HTTP/1.1&quot; 200 -
+10.0.7.216 - - [10/Jan/2023 16:48:57] &quot;GET / HTTP/1.1&quot; 200 -
+10.0.30.7 - - [10/Jan/2023 16:49:00] &quot;GET / HTTP/1.1&quot; 200 -
+10.0.7.216 - - [10/Jan/2023 16:49:27] &quot;GET / HTTP/1.1&quot; 200 -
+10.0.30.7 - - [10/Jan/2023 16:49:30] &quot;GET / HTTP/1.1&quot; 200 -
+10.0.7.216 - - [10/Jan/2023 16:49:57] &quot;GET / HTTP/1.1&quot; 200 -
+10.0.30.7 - - [10/Jan/2023 16:50:00] &quot;GET / HTTP/1.1&quot; 200 -
+10.0.7.216 - - [10/Jan/2023 16:50:27] &quot;GET / HTTP/1.1&quot; 200 -
+10.0.30.7 - - [10/Jan/2023 16:50:30] &quot;GET / HTTP/1.1&quot; 200 -
+10.0.7.216 - - [10/Jan/2023 16:50:57] &quot;GET / HTTP/1.1&quot; 200 -
+10.0.30.7 - - [10/Jan/2023 16:51:00] &quot;GET / HTTP/1.1&quot; 200 -
+^C<font color="#26A269"><b>ubuntu@ip-10-0-158-221</b></font>:<font color="#12488B"><b>/srv/hostname</b></font>$ nohup flask --app /srv/hostname/hostname.py run --host 0.0.0.0me/hostname.py run --host 0.0.0.0
+nohup: ignoring input and appending output to &apos;/home/ubuntu/nohup.out&apos;
+<font color="#26A269"><b>ubuntu@ip-10-0-158-221</b></font>:<font color="#12488B"><b>/srv/hostname</b></font>$ bg
+-bash: bg: current: no such job
+<font color="#26A269"><b>ubuntu@ip-10-0-158-221</b></font>:<font color="#12488B"><b>/srv/hostname</b></font>$ nohup flask --app /srv/hostname/hostname.py run --host 0.0.0.0
+nohup: ignoring input and appending output to &apos;/home/ubuntu/nohup.out&apos;
+^Z
+[1]+  Stopped                 nohup flask --app /srv/hostname/hostname.py run --host 0.0.0.0
+<font color="#26A269"><b>ubuntu@ip-10-0-158-221</b></font>:<font color="#12488B"><b>/srv/hostname</b></font>$ bg
+[1]+ nohup flask --app /srv/hostname/hostname.py run --host 0.0.0.0 &amp;
+<font color="#26A269"><b>ubuntu@ip-10-0-158-221</b></font>:<font color="#12488B"><b>/srv/hostname</b></font>$ client_loop: send disconnect: Broken pipe
+client_loop: send disconnect: Broken pipe
+<font color="#26A269"><b>motunrayo@motunrayo-HP-Laptop-14-dq4xxx</b></font>:<font color="#12488B"><b>~</b></font>$ 
+</pre>
